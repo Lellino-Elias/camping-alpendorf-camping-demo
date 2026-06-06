@@ -2,6 +2,7 @@ import Img from "@/components/ui/Img";
 import Reveal from "@/components/ui/Reveal";
 import { NavLink } from "@/components/ui/Placeholder";
 import { campsite } from "@/content/campsite.config";
+import { eur } from "@/lib/format";
 
 export default function Mobilheime() {
   if (!campsite.mobilheime) return null;
@@ -42,7 +43,7 @@ export default function Mobilheime() {
                     <h3 className="font-display text-2xl font-bold text-ink">{m.name}</h3>
                     {m.priceFrom && (
                       <span className="text-sm text-muted">
-                        ab <span className="font-display text-lg font-bold text-gold">€{m.priceFrom}</span>
+                        ab <span className="font-display text-lg font-bold text-gold">{eur(m.priceFrom)}</span>
                       </span>
                     )}
                   </div>

@@ -5,6 +5,7 @@ import { campsite } from "@/content/campsite.config";
 import { usePlaceholderToast } from "@/components/ui/Placeholder";
 import Reveal from "@/components/ui/Reveal";
 import Magnetic from "@/components/ui/Magnetic";
+import { eur } from "@/lib/format";
 
 /** Tween a number toward `target` whenever it changes. */
 function useTween(target: number, duration = 650) {
@@ -126,7 +127,7 @@ export default function Booking() {
                     >
                       <span className="block text-sm font-semibold text-ink">{c.label}</span>
                       <span className="mt-1 block text-xs text-muted">
-                        ab <span className="font-display text-base font-bold text-gold">€{c.perNight}</span> / Nacht
+                        ab <span className="font-display text-base font-bold text-gold">{eur(c.perNight)}</span> / Nacht
                       </span>
                     </button>
                   );
@@ -140,7 +141,7 @@ export default function Booking() {
                     Gesamt · {cat?.label ?? "Anfrage"} · {guests} Pers. · {nights} {nights === 1 ? "Nacht" : "Nächte"}
                   </span>
                   <div className="font-display mt-1 text-4xl sm:text-5xl font-extrabold tracking-tight text-ink">
-                    €{animatedTotal}
+                    {eur(animatedTotal)}
                   </div>
                   <span className="mt-1 block text-xs leading-snug text-muted">{pricesArePlaceholder ? "Unverbindlicher Richtpreis · noch nicht final bestätigt" : priceNote}</span>
                 </div>

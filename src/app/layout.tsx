@@ -54,7 +54,7 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html:
-              "(function(){var d=document;d.documentElement.classList.add('reveal-js');function s(e){e.classList.add('is-in')}function init(){var els=d.querySelectorAll('.reveal');if(!('IntersectionObserver' in window)){els.forEach(s);return}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){s(e.target);io.unobserve(e.target)}})},{threshold:0.12,rootMargin:'0px 0px -6% 0px'});els.forEach(function(e){io.observe(e)});setTimeout(function(){d.querySelectorAll('.reveal:not(.is-in)').forEach(s)},3500)}if(d.readyState==='loading'){d.addEventListener('DOMContentLoaded',init)}else{init()}})();",
+              "(function(){var d=document;d.documentElement.classList.add('reveal-js');function s(e){e.classList.add('is-in')}function init(){var els=d.querySelectorAll('.reveal');if(!('IntersectionObserver' in window)){els.forEach(s);return}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){s(e.target);io.unobserve(e.target)}})},{threshold:0.12,rootMargin:'0px 0px -6% 0px'});els.forEach(function(e){io.observe(e)});setTimeout(function(){d.querySelectorAll('.reveal:not(.is-in)').forEach(s)},1200)}if(d.readyState==='loading'){d.addEventListener('DOMContentLoaded',init)}else{init()}})();",
           }}
         />
         {children}

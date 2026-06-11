@@ -163,7 +163,7 @@ export const campingAlpendorf: CampsiteConfig = {
     facebook: "https://www.facebook.com/CampingSantner",
     adresse: "Weißbriach 208 · 9622 Weißbriach · Kärnten",
     // Koordinaten aus dem Scrape (contact.json) — Weißbriach; bitte Pin bestätigen.
-    coords: { lat: 46.682446, lng: 13.248019 },
+    coords: { lat: 46.68974, lng: 13.252083 },
   },
 
   languages: ["DE", "EN"],
